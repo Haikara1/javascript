@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aeroporto</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: lightgray;
+            border: 5px solid black;
+            height: 300px;
+            text-align: center;
+            background-image: -webkit-gradient(linear, left top, right bottom,from(#667eea), to(#764ba2));
+        }
+        input#txtpais {
+            background-color: lightblue;
+        }
+        input#button {
+            border-radius: 5px;
+            background-color: white;
+        }
+        input#button:hover{
+            background-color: rgb(115, 115, 150);
+            cursor: pointer;
+        }
+        div#res {
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Checagem de Passageiros</h1>
+    <p>Para começar a Checagem digite abaixo o seu país de origem:</p>
+    <input type="text" name="txtpais" id="txtpais">
+    <input id="button" type="button" value="Verificar" onclick="verificar()">
+    <div id="res"><strong>Resultado</strong></div>
+    <script>
+
+        var txtpais = window.document.querySelector('input#txtpais')
+        var res = window.document.querySelector('div#res')
+        function verificar() {
+             var pais = txtpais.value
+            if (pais.toLowerCase() != 'brasil') {
+                res.innerHTML = `<p>Você nasceu em <strong>${pais}</strong>.<br> </p><p> Você é um <strong>Estrangeiro!</strong></p>`
+            } else {
+                res.innerHTML = `<p>Você nasceu em <strong>${pais}</strong>.<br> Você é um <strong>Brasileiro</strong>!</p>`
+            }
+        }
+    </script>
+</body>
+</html>
