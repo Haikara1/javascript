@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+header {
+    color: white;
+    text-align: center;
+}
+
+section {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.459);
+
+}
+
+img#foto {
+    object-fit: cover;
+    object-position: center;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: block;
+    margin: auto;
+    padding: 10px;
+    padding-top: 20px;
+}
+
+div#res {
+    text-align: center;
+}
+
+body {
+    background-color: rgb(70, 142, 236);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+footer {
+    color: white;
+    text-align: center;
+    font-style: italic;
+}
